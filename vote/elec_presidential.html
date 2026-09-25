@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élections présidentielles</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <style>        
+       .div-border{
+        border: 1px solid #b3b0b0;
+       }
+       .picture1{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/pharelle.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture2{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/clive.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture3{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/joyce.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture4{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/charlaine.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture5{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/Rachel.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture6{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/kk.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-body justify-content-between" style="height: 100vh;">
+    <div class="container">
+
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture1"></div>
+                <h3>Effouyonti Pharelle</h3>
+                <p><b>Parti :</b> Jeunes Visionnaires</p>
+                <p class="text-danger"><b>« Le renouveau politique, c'est maintenant. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Effouyonti Pharelle')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture2"></div>
+                <h3>Djamen Clive</h3>
+                <p><b>Parti :</b> Alliance Citoyenne</p>
+                <p class="text-danger"><b>« Redonner le pouvoir aux citoyens. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Djamen Clive')">Voter</button>
+            </div>
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture3"></div>
+                <h3>Mafo Joyce Delice</h3>
+                <p><b>Parti :</b> Génération Équité</p>
+                <p class="text-danger"><b>« Briser le plafond de verre, pour une charge égale. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Mafo Joyce Delice')">Voter</button>
+            </div>
+        </div>
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture4"></div>
+                <h3>Belva Charlaine</h3>
+                <p><b>Parti :</b> Les Racines et L'Avenir</p>
+                <p class="text-danger"><b>« Préserver nos valeurs, préparer demain. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Belva Charlaine')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture5"></div>
+                <h3>Mbebi Rachel</h3>
+                <p><b>Parti :</b> L'étoile du Progrès pour le futur</p>
+                <p class="text-danger"><b>« L'avenir se construit ensemble, pas seul. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Mbebi Rachel')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture6"></div>
+                <h3>Kyotaka Anayokoji</h3>
+                <p><b>Parti :</b> Le Parti des Territoires</p>
+                <p class="text-danger"><b>« Un État léger, des régions fortes. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Kyotaka Anayokoji')">Voter</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="vote2.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual-Box : plateforme de vote</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span style="color: red; font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">VIRTUAL</span>
+        <img src="/image/photo_2025-11-28_02-52-11 (2).jpg" alt="logo de vote" width="80" height="60"
+          class="d-inline-block align-text-center me-2">
+        <span style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">ELECTIONS</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto nav-custom">
+          <li class="nav-item">
+            <a class="nav-link active" href="Accueil.html">
+              <i class="bi bi-house-door nav-icon"></i>
+              <span>Accueil</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Inscription.html">
+              <i class="bi bi-pencil-square nav-icon"></i>
+              <span>Inscription</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Connexion.html">
+              <i class="bi bi-check-square nav-icon"></i>
+              <span>Voter</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Connexion.html">
+              <i class="bi bi-graph-up nav-icon"></i>
+              <span>Résultats</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Candidature.html">
+              <i class="bi bi-person-circle"></i>
+              <span>Candidat</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Aide.html">
+              <i class="bi bi-question-circle nav-icon"></i>
+              <span>Aide</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO SECTION -->
+  <section id="accueil" class="hero-section1 pt-5">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">
+          <i class="bi bi-shield-check me-2"></i>
+          Plateforme Sécurisée
+        </span>
+        <h1 class="hero-title">BIENVENUE À VIRTUAL ELECTION</h1>
+        <p class="hero-description">
+          Virtual Box révolutionne le processus électoral avec une plateforme de vote,
+          transparente, accessible et fiable pour plusieurs types d'élections.
+        </p>
+        <a href="/Inscription.html"><button type="button" class="bg-light opacity-50">COMMENCER MAINTENANT</button></a>
+        <p class="hero-description mt-4">
+          Tentez votre chance et postuler pour être élu(e) à une élection de votre choix !
+        </p>
+        <a href="/Candidature.html"><button type="button" class="bg-light opacity-50">POSTULER ICI</button></a>
+      </div>
+    </div>
+  </section>
+  <!-- FEATURES SECTION -->
+  <section class="features-section">
+    <div class="container text-white">
+      <div class="row text-center mb-5">
+        <div class="col-12">
+          <h2 class="display-4 fw-bold mb-3">Nos objectifs</h2>
+          <p class="lead">Une solution complète pour des élections modernes</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-shield-lock feature-icon"></i>
+            <h4>Sécurité</h4>
+            <p>Protocoles de chiffrement avancés pour garantir l'intégrité du vote</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-lightning-charge feature-icon"></i>
+            <h4>Rapidité</h4>
+            <p>Résultats en temps réel avec traitement instantané des données</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <i class="bi bi-eye feature-icon"></i>
+            <h4>Transparence</h4>
+            <p>Processus vérifiable et audit complet des opérations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultat section -->
+    <div class="container mt-4 text-center">
+      <h2>Tableau des résultats</h2>
+      <div id="loading-message" class="text-center py-4">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Chargement...</span>
+        </div>
+        <p class="mt-2">Le tableau apparaîtra dans <span id="countdown">quelques</span> instants...</p>
+      </div>
+
+      <div id="delayed-table" class="d-none">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover table-bordered">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Type d'Élection</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Parti</th>
+                <th scope="col">Votes</th>
+                <th scope="col">Pourcentage</th>
+                <th scope="col">Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Legislatives</td>
+                <td>MIYU</td>
+                <td>AVELINE</td>
+                <td>Alliance Citoyenne</td>
+                <td>1,250,000 voix</td>
+                <td>42%</td>
+                <td><span class="badge bg-success">Terminé</span></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Presidentielles</td>
+                <td>ANAYOKOJI</td>
+                <td>KYOTAKA</td>
+                <td>Le Parti Des Territoires</td>
+                <td>980,000 voix</td>
+                <td>33%</td>
+                <td><span class="badge bg-success">Terminé</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Senatoriales</td>
+                <td>DIABOLO</td>
+                <td>NOIR</td>
+                <td>L'étoile du Progrès pour le futur</td>
+                <td>1,000,000 voix</td> 
+                <td>38%</td>
+                <td><span class="badge bg-success">Terminer</span></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Regionales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="badge bg-warning">En cours</span></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Municipales</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><span class="badge bg-danger">Annuler</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const delay = 5000;
+      let countdown = delay / 1000;
+      const btndisable = document.querySelectorAll('button');
+
+      function disable() {
+        btndisable.forEach(button => {
+          button.disabled = true;
+          button.classList.add('disabled');
+        });
+      }
+
+      const countdownInterval = setInterval(() => {
+        if (countdown <= 0) {
+          clearInterval(countdownInterval);
+        }
+      }, 5000);
+
+
+      setTimeout(() => {
+        document.getElementById('loading-message').classList.add('d-none');
+        document.getElementById('delayed-table').classList.remove('d-none');
+        document.getElementById('delayed-table').classList.add('d-block');
+
+        disable();
+      }, delay);
+    </script>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Service des Élections</h5>
+          <p class="mb-2">Plateforme de vote et dépôt de candidatures</p>
+          <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>INF TPE 273, FAC Science</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5 class="fw-bold">Contact</h5>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i> elections@civixcrew.com</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i> 01 23 45 67 89</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i> Lundi au vendredi, 9h-17h</p>
+        </div>
+      </div>
+      <div class="text-center mt-3 pt-3 border-top border-secondary">
+        <p class="mb-0">&copy; 2025 Commission Électorale. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

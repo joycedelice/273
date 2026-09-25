@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats des Élections</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body class="sub-hero">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4">
+        <div class="container">
+                <a class="navbar-brand" href="#">
+                <span style="color: red; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">VIRTUAL</span>
+                <img src="/image/photo_2025-11-28_02-52-11 (2).jpg" alt="logo de vote" width="80" height="60" class="d-inline-block align-text-center me-2">
+                <span style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">ELECTIONS</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto nav-custom">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/Accueil.html">
+                            <i class="bi bi-house-door nav-icon"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Inscription.html">
+                            <i class="bi bi-pencil-square nav-icon"></i>
+                            <span>Inscription</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Connexion.html">
+                            <i class="bi bi-check-square nav-icon"></i>
+                            <span>Voter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Resultat.html">
+                            <i class="bi bi-graph-up nav-icon"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Candidature.html">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Candidat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Aide.html">
+                            <i class="bi bi-question-circle nav-icon"></i>
+                            <span>Aide</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <header class="text-center mb-5">
+            <h1 class="display-1 fw-bold text-primary">Résultats des Élections</h1>
+            <div class="btn-group mt-4 flex-wrap" role="group">
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 mx-2 mb-2"
+                    id="btn-legislatives">Législatives</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 mx-2 mb-2"
+                    id="btn-presidentielle">Présidentielle</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 mx-2 mb-2"
+                    id="btn-senatorial">Sénatoriales</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 mx-2 mb-2"
+                    id="btn-municipal">Municipales</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 mx-2 mb-2"
+                    id="btn-regional">Régionales</button>
+            </div>
+        </header>
+
+        <section id="en-cour" class="d-block">
+            <h2 class="display-4 fw-bold text-center text-white opacity-50">Sélectionnez un type d'élection...</h2>
+            <p class="text-center mt-3 text-white opacity-50">Choisissez une catégorie d'élection ci-dessus pour
+                afficher les résultats
+                détaillés</p>
+        </section>
+
+        <!-- Section Résultats Législatives -->
+        <section id="legislatives" class="d-none">
+            <h2 class="text-center mb-4 text-white opacity-50">Résultats des Élections Législatives</h2>
+
+            <!-- Graphique en courbes -->
+            <div class="row mb-5">
+                <div class="col-md-10 mx-auto">
+                    <h4 class="text-center mb-3 text-white opacity-50">Évolution des voix par parti</h4>
+                    <div class="card p-4 shadow-sm">
+                        <div class="text-center mb-3">
+                            <span class="badge bg-success me-2">Alliance Citoyenne</span>
+                            <span class="badge bg-info me-2">Les Racines et L'Avenir</span>
+                            <span class="badge bg-warning me-2">Génération Equité</span>
+                        </div>
+                        <svg width="100%" height="200" class="border rounded">
+                            <path d="M50,180 L150,120 L250,140 L350,160 L450,170" stroke="#198754" stroke-width="3"
+                                fill="none" />
+                            <path d="M50,160 L150,140 L250,130 L350,150 L450,165" stroke="#0dcaf0" stroke-width="3"
+                                fill="none" />
+                            <path d="M50,140 L150,160 L250,170 L350,170 L450,175" stroke="#ffc107" stroke-width="3"
+                                fill="none" />
+                            <circle cx="50" cy="180" r="4" fill="#198754" />
+                            <circle cx="150" cy="120" r="4" fill="#198754" />
+                            <circle cx="250" cy="140" r="4" fill="#198754" />
+                            <circle cx="350" cy="160" r="4" fill="#198754" />
+                            <circle cx="450" cy="170" r="4" fill="#198754" />
+
+                            <circle cx="50" cy="160" r="4" fill="#0dcaf0" />
+                            <circle cx="150" cy="140" r="4" fill="#0dcaf0" />
+                            <circle cx="250" cy="130" r="4" fill="#0dcaf0" />
+                            <circle cx="350" cy="150" r="4" fill="#0dcaf0" />
+                            <circle cx="450" cy="165" r="4" fill="#0dcaf0" />
+
+                            <circle cx="50" cy="140" r="4" fill="#ffc107" />
+                            <circle cx="150" cy="160" r="4" fill="#ffc107" />
+                            <circle cx="250" cy="170" r="4" fill="#ffc107" />
+                            <circle cx="350" cy="170" r="4" fill="#ffc107" />
+                            <circle cx="450" cy="175" r="4" fill="#ffc107" />
+
+                            <line x1="40" y1="180" x2="460" y2="180" stroke="gray" stroke-width="1" />
+                            <line x1="40" y1="180" x2="40" y2="80" stroke="gray" stroke-width="1" />
+                            <text x="30" y="190" font-size="12">0%</text>
+                            <text x="30" y="100" font-size="12">100%</text>
+                            <text x="80" y="195" font-size="10">Tour 1</text>
+                            <text x="180" y="195" font-size="10">Tour 2</text>
+                            <text x="280" y="195" font-size="10">Tour 3</text>
+                            <text x="380" y="195" font-size="10">Final</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidats -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/aveline.jpeg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidat 1" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">MIYU AVELINE</h5>
+                            <p class="card-text">Alliance Citoyenne</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                    role="progressbar" data-width="42">
+                                    42%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">1,250,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/charlaine.jpg" class="rounded-circle mb-3" width="120"
+                                height="120" alt="Candidat 2" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">BELVA CHARLAINE</h5>
+                            <p class="card-text">Les Racines et L'Avenir</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" data-width="35">
+                                    35%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">1,045,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/mhyline.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidat 3">
+                            <h5 class="card-title">JEUFACK MAHELYNE</h5>
+                            <p class="card-text">Génération Equité</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                    role="progressbar" data-width="23">
+                                    23%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">685,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Résultats Présidentielle -->
+        <section id="presidentielle" class="d-none">
+            <h2 class="text-center mb-4  text-white opacity-50">Résultats de l'Élection Présidentielle</h2>
+
+            <!-- Graphique en courbes -->
+            <div class="row mb-5">
+                <div class="col-md-10 mx-auto">
+                    <h4 class="text-center mb-3  text-white opacity-50">Évolution des voix par candidat</h4>
+                    <div class="card p-4 shadow-sm">
+                        <div class="text-center mb-3">
+                            <span class="badge bg-danger me-2">Le Parti Des Territoires</span>
+                            <span class="badge bg-primary me-2">L'étoile du Progrès pour le futur</span>
+                            <span class="badge bg-secondary me-2">Génération Equité</span>
+                        </div>
+                        <svg width="100%" height="200" class="border rounded">
+                            <!-- Ligne Candidate X -->
+                            <path d="M50,150 L150,130 L250,120 L350,110 L450,104" stroke="#dc3545" stroke-width="3"
+                                fill="none" />
+                            <!-- Ligne Candidate Y -->
+                            <path d="M50,130 L150,140 L250,150 L350,140 L450,135" stroke="#0d6efd" stroke-width="3"
+                                fill="none" />
+                            <!-- Ligne Candidate Z -->
+                            <path d="M50,170 L150,160 L250,155 L350,165 L450,166" stroke="#6c757d" stroke-width="3"
+                                fill="none" />
+                            <!-- Points sur la courbe -->
+                            <circle cx="50" cy="150" r="4" fill="#dc3545" />
+                            <circle cx="150" cy="130" r="4" fill="#dc3545" />
+                            <circle cx="250" cy="120" r="4" fill="#dc3545" />
+                            <circle cx="350" cy="110" r="4" fill="#dc3545" />
+                            <circle cx="450" cy="104" r="4" fill="#dc3545" />
+
+                            <circle cx="50" cy="130" r="4" fill="#0d6efd" />
+                            <circle cx="150" cy="140" r="4" fill="#0d6efd" />
+                            <circle cx="250" cy="150" r="4" fill="#0d6efd" />
+                            <circle cx="350" cy="140" r="4" fill="#0d6efd" />
+                            <circle cx="450" cy="135" r="4" fill="#0d6efd" />
+
+                            <circle cx="50" cy="170" r="4" fill="#6c757d" />
+                            <circle cx="150" cy="160" r="4" fill="#6c757d" />
+                            <circle cx="250" cy="155" r="4" fill="#6c757d" />
+                            <circle cx="350" cy="165" r="4" fill="#6c757d" />
+                            <circle cx="450" cy="166" r="4" fill="#6c757d" />
+
+                            <!-- Axes et légendes -->
+                            <line x1="40" y1="180" x2="460" y2="180" stroke="gray" stroke-width="1" />
+                            <line x1="40" y1="180" x2="40" y2="80" stroke="gray" stroke-width="1" />
+                            <text x="30" y="190" font-size="12">0%</text>
+                            <text x="30" y="100" font-size="12">50%</text>
+                            <text x="80" y="195" font-size="10">Mois 1</text>
+                            <text x="180" y="195" font-size="10">Mois 2</text>
+                            <text x="280" y="195" font-size="10">Mois 3</text>
+                            <text x="380" y="195" font-size="10">Final</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidats -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/KK.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidate X" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">KYOTAKA ANAYOKOJI</h5>
+                            <p class="card-text"> Le Parti Des Territoires</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                                    role="progressbar" data-width="33">
+                                    33%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">980,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/Rachel.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidate Y" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">MBEBI RACHEL</h5>
+                            <p class="card-text">L'étoile du Progrès pour le futur</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+                                    role="progressbar" data-width="20">
+                                    20%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">13,620,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/joyce.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidate Z" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">MAFO JOYCE DELICE</h5>
+                            <p class="card-text">Génération Equité</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                    role="progressbar" data-width="7">
+                                    7%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">2,120,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections Municipal, Sénatorial et Régional avec le même format -->
+        <!-- Section Résultats Sénatorial -->
+        <section id="senatorial" class="d-none">
+            <h2 class="text-center mb-4 text-white opacity-50">Résultats des Élections Sénatoriales</h2>
+
+            <!-- Graphique en courbes -->
+            <div class="row mb-5">
+                <div class="col-md-10 mx-auto">
+                    <h4 class="text-center mb-3 text-white opacity-50">Évolution des voix par parti</h4>
+                    <div class="card p-4 shadow-sm">
+                        <div class="text-center mb-3">
+                            <span class="badge bg-success me-2">L'étoile du Progrès pour le futur</span>
+                            <span class="badge bg-info me-2">Jeunes Visionnaires</span>
+                            <span class="badge bg-warning me-2">Alliance Citoyenne</span>
+                        </div>
+                        <svg width="100%" height="200" class="border rounded">
+                            <!-- Ligne Parti A -->
+                            <path d="M50,160 L150,140 L250,130 L350,124 L450,124" stroke="#198754" stroke-width="3"
+                                fill="none" />
+                            <!-- Ligne Parti B -->
+                            <path d="M50,140 L150,150 L250,145 L350,140 L450,138" stroke="#0dcaf0" stroke-width="3"
+                                fill="none" />
+                            <!-- Ligne Parti C -->
+                            <path d="M50,120 L150,130 L250,140 L350,150 L450,152" stroke="#ffc107" stroke-width="3"
+                                fill="none" />
+                            <!-- Points sur la courbe (similaire aux autres) -->
+                            <circle cx="50" cy="160" r="4" fill="#198754" />
+                            <circle cx="150" cy="140" r="4" fill="#198754" />
+                            <circle cx="250" cy="130" r="4" fill="#198754" />
+                            <circle cx="350" cy="124" r="4" fill="#198754" />
+                            <circle cx="450" cy="124" r="4" fill="#198754" />
+
+                            <circle cx="50" cy="140" r="4" fill="#0dcaf0" />
+                            <circle cx="150" cy="150" r="4" fill="#0dcaf0" />
+                            <circle cx="250" cy="145" r="4" fill="#0dcaf0" />
+                            <circle cx="350" cy="140" r="4" fill="#0dcaf0" />
+                            <circle cx="450" cy="138" r="4" fill="#0dcaf0" />
+
+                            <circle cx="50" cy="120" r="4" fill="#ffc107" />
+                            <circle cx="150" cy="130" r="4" fill="#ffc107" />
+                            <circle cx="250" cy="140" r="4" fill="#ffc107" />
+                            <circle cx="350" cy="150" r="4" fill="#ffc107" />
+                            <circle cx="450" cy="152" r="4" fill="#ffc107" />
+
+                            <!-- Axes et légendes -->
+                            <line x1="40" y1="180" x2="460" y2="180" stroke="gray" stroke-width="1" />
+                            <line x1="40" y1="180" x2="40" y2="80" stroke="gray" stroke-width="1" />
+                            <text x="30" y="190" font-size="12">0%</text>
+                            <text x="30" y="100" font-size="12">40%</text>
+                            <text x="80" y="195" font-size="10">Sem 1</text>
+                            <text x="180" y="195" font-size="10">Sem 2</text>
+                            <text x="280" y="195" font-size="10">Sem 3</text>
+                            <text x="380" y="195" font-size="10">Final</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidats -->
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/dia.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidat 1" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">NOIR DIABOLO</h5>
+                            <p class="card-text">L'étoile du Progrès pour le futur</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                    role="progressbar" data-width="38">
+                                    38%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">1,000,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/chanelle.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidat 2" loading="lazy" style="object-fit:cover;">
+                            <h5 class="card-title">MESMINE CHANELLE</h5>
+                            <p class="card-text">Jeunes Visionnaires</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                                    role="progressbar" data-width="32">
+                                    32%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">800,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="/image/candidat/lauriane.jpg" class="rounded-circle mb-3" width="120" height="120"
+                                alt="Candidat 3">
+                            <h5 class="card-title">TASKEM LAURIANE</h5>
+                            <p class="card-text">Alliance Citoyenne</p>
+                            <div class="progress mb-2" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                    role="progressbar" data-width="20">
+                                    20%
+                                </div>
+                            </div>
+                            <p class="card-text"><small class="text-muted">500,000 voix</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections Municipal et Régional suivent le même modèle -->
+        <!-- Section Résultats Municipal -->
+        <section id="municipal" class="d-none text-center text-white opacity-50">
+            <h2 class="text-center mb-4">Résultats des Élections Municipales</h2>
+            <p>Une erreur s'est produite lors du vote. Par conséquent, ce vote a été annulé.</p>
+            <!-- Graphique en courbes similaire aux autres sections -->
+            <!-- Candidats avec barres de progression individuelles -->
+        </section>
+
+        <!-- Section Résultats Régional -->
+        <section id="regional" class="d-none text-center text-white opacity-50">
+            <h2 class="text-center mb-4">Résultats des Élections Régionales</h2>
+            <p>En cours de calcul.</p>
+            <!-- Graphique en courbes similaire aux autres sections -->
+            <!-- Candidats avec barres de progression individuelles -->
+        </section>
+    </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const footer = document.getElementById('footer');
+            // Fonction pour animer les barres de progression
+            function animateProgressBars(sectionId) {
+                const progressBars = document.querySelectorAll(`#${sectionId} .progress-bar`);
+                progressBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width + '%';
+                    }, 100);
+                });
+            }
+
+            // Fonction pour afficher une section
+            function showSection(sectionId) {
+                // Cacher toutes les sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('d-none');
+                    section.classList.remove('d-block');
+                });
+
+                // Afficher la section sélectionnée
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.remove('d-none');
+                    targetSection.classList.add('d-block');
+                    animateProgressBars(sectionId);
+                }
+                if (footer) footer.classList.remove('fixed-bottom');
+            }
+
+            // Helper pour attacher des écouteurs uniquement si le bouton existe
+            function attachButton(btnId, sectionId) {
+                const btn = document.getElementById(btnId);
+                if (btn) {
+                    btn.addEventListener('click', function () {
+                        showSection(sectionId);
+                    });
+                }
+            }
+
+            // Attacher les boutons (silencieux si certains boutons manquent)
+            attachButton('btn-legislatives', 'legislatives');
+            attachButton('btn-presidentielle', 'presidentielle');
+            attachButton('btn-senatorial', 'senatorial');
+            attachButton('btn-municipal', 'municipal');
+            attachButton('btn-regional', 'regional');
+        });
+    </script>
+                <footer class="bg-dark text-white py-4 fixed-bottom" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Service des Élections</h5>
+                    <p class="mb-2">Plateforme de vote et dépôt de candidatures</p>
+                    <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>INF TPE 273, FAC Science</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope me-2"></i> elections@civixcrew.com</p>
+                    <p class="mb-1"><i class="bi bi-telephone me-2"></i> 01 23 45 67 89</p>
+                    <p class="mb-0"><i class="bi bi-clock me-2"></i> Lundi au vendredi, 9h-17h</p>
+                </div>
+            </div>
+            <div class="text-center mt-3 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2025 Commission Électorale. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élections municipales</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <style>        
+       .div-border{
+        border: 1px solid #b3b0b0;
+       }
+       .picture1{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/casile.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture2{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/clive.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture3{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/marius.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture4{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/armel.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture5{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/dylan.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture6{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/Screenshot_20250901-042954_PixAI.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-body justify-content-between" style="height: 100vh;">
+    <div class="container">
+
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture1"></div>
+                <h3>Ngatcha Casile Ariel</h3>
+                <p><b>Parti :</b> Jeunes Visionnaires</p>
+                <p class="text-danger"><b>« Une gestion locale dynamique et transparente. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Ngatcha Casile Ariel')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture2"></div>
+                <h3>Djamen Clive</h3>
+                <p><b>Parti :</b> Alliance Citoyenne</p>
+                <p class="text-danger"><b>« Décidons ensemble de notre quotidien. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Djamen Clive')">Voter</button>
+            </div>
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture3"></div>
+                <h3>Marius Dorcel</h3>
+                <p><b>Parti :</b> Génération Équité</p>
+                <p class="text-danger"><b>« Un quartier juste, pour chaque habitant. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Marius Dorcel')">Voter</button>
+            </div>
+        </div>
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture4"></div>
+                <h3>NjinKeu Armel</h3>
+                <p><b>Parti :</b> Les Racines et L'Avenir</p>
+                <p class="text-danger"><b>« Un cadre de vie stable et sécurisé. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('NjinKeu Armel')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture5"></div>
+                <h3>Dylan Trésor</h3>
+                <p><b>Parti :</b> L'étoile du Progrès pour le futur</p>
+                <p class="text-danger"><b>« L'avenir se construit ensemble, pas seul. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Dylan Trésor')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture6"></div>
+                <h3>Lux Arcadia</h3>
+                <p><b>Parti :</b> Le Parti des Territoires</p>
+                <p class="text-danger"><b>« L'innovation, pour notre ville. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Lux Arcadia')">Voter</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="vote2.js"></script>
+</body>
+</html>

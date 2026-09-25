@@ -1,0 +1,170 @@
+ .navbar {
+     background: linear-gradient(135deg, rgba(197, 217, 247, 0.9),  rgba(245, 211, 214, 0.9));
+     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+ }
+
+ .nav-custom .nav-link {
+     border-radius: 8px;
+     padding: 12px 20px;
+     margin: 0 4px;
+     transition: all 0.3s ease;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-weight: 500;
+ }
+
+ .nav-custom .nav-link:hover {
+     color: blue !important;
+     transform: translateY(-2px);
+     box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+ }
+
+ .nav-custom .nav-link.active {
+     color: red !important;
+     border-bottom: 3px solid red;
+ }
+
+ .hero-section1 {
+     background: linear-gradient(135deg, rgba(220, 53, 69, 0.9), rgba(13, 110, 253, 0.9)), url('/image/photo_2025-11-28_02-52-11.jpg') center/cover no-repeat;
+     height: 100vh;
+     position: relative;
+     color: white;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+ }
+
+ .hero-content {
+     position: relative;
+     z-index: 2;
+     max-width: 650px;
+     padding: 40px;
+     animation: fadeInUp 1s ease-out;
+ }
+
+ .hero-badge {
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(10px);
+     padding: 8px 20px;
+     border-radius: 50px;
+     font-size: 0.9rem;
+     font-weight: 600;
+     letter-spacing: 1px;
+     margin-bottom: 20px;
+     display: inline-block;
+ }
+
+ .hero-title {
+     font-size: 3.5rem;
+     font-weight: 800;
+     margin-bottom: 25px;
+     line-height: 1.2;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+ .hero-description {
+     font-size: 1.2rem;
+     line-height: 1.6;
+     margin-bottom: 35px;
+     opacity: 0.9;
+ }
+
+ /* Features Section */
+ .features-section {
+     padding: 100px 0;
+     background: linear-gradient(to right, rgba(220, 53, 69, 0.9), rgba(13, 110, 253, 0.9));
+ }
+
+ .feature-card {
+     padding: 40px 30px;
+     border-radius: 15px;
+     text-align: center;
+     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+     height: 100%;
+     border: none;
+ }
+
+
+
+ .feature-icon {
+     font-size: 3rem;
+     margin-bottom: 20px;
+ }
+
+
+
+ .left-panel {
+     background: url("/image/IMG-20251128-WA0164.jpg") center/cover no-repeat;
+     color: white;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding: 20px;
+ }
+
+ .left-panel img {
+     width: 85%;
+     border-radius: 10px;
+ }
+
+ .form-container {
+     background: white;
+     border-radius: 10px;
+     padding: 35px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+ }
+
+ body {
+     backdrop-filter: #f8f9fa;
+ }
+
+ header {
+     border-bottom: 5px solid #007bff;
+ }
+
+ .step-card,
+ .condition-card {
+     transition: transform 0.2s;
+
+ }
+
+ .step-card:hover,
+ .condition-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 0.5rem 1rem rgb(0, 0, 0 0.15) !important;
+ }
+
+
+ .hero-section {
+     background: url("/image/images\ \(5\).jpeg") center/cover no-repeat;
+
+     height: 100vh;
+     position: relative;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+
+ .sub-hero {
+     background: url('/image/images\ \(5\).jpeg') center/cover no-repeat;
+ }
+
+ .input-box {
+     position: relative;
+ }
+
+ .input-box i {
+     position: absolute;
+     right: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     color: blue;
+     z-index: 5;
+ }

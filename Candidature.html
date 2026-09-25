@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Candidat - Élections</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Styles minimaux pour quelques éléments spécifiques */
+        .required-field::after {
+            content: " *";
+            color: #dc3545;
+        }
+
+        .election-icon {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light sub-hero">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span
+                    style="color: red; font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">VIRTUAL</span>
+                <img src="/image/photo_2025-11-28_02-52-11 (2).jpg" alt="logo de vote" width="80" height="60"
+                    class="d-inline-block align-text-center me-2">
+                <span style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">ELECTIONS</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto nav-custom">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Accueil.html">
+                            <i class="bi bi-house-door nav-icon"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Inscription.html">
+                            <i class="bi bi-pencil-square nav-icon"></i>
+                            <span>Inscription</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Connexion.html">
+                            <i class="bi bi-check-square nav-icon"></i>
+                            <span>Voter</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Connexion.html">
+                            <i class="bi bi-graph-up nav-icon"></i>
+                            <span>Résultats</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Candidature.html">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Candidat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Aide.html">
+                            <i class="bi bi-question-circle nav-icon"></i>
+                            <span>Aide</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- En-tête -->
+    <header class="bg-dark text-white shadow py-5 mt-5">
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <h1 class="display-5 fw-bold"><i class="bi bi-person-badge me-2"></i>Inscription Candidat aux Élections
+                </h1>
+                <p class="lead mb-0">Postulez en tant que candidat pour les élections de votre choix</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 mb-4 opacity-10">
+                <!-- Formulaire d'inscription -->
+                <div class="card shadow border-0 rounded-3 bg-white bg-opacity-50">
+                    <div class="card-body p-4">
+                        <h2 class="card-title mb-4"><i class="bi bi-person-plus me-2 text-primary"></i>Formulaire
+                            d'inscription candidat</h2>
+                        <p class="text-muted mb-4">Remplissez ce formulaire pour vous porter candidat à une élection.
+                        </p>
+
+                        <form id="candidatform">
+                            <!-- Informations sur l'élection -->
+                            <div class="alert alert-info border-start border-5 border-info mb-4">
+                                <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Choix de l'élection</h5>
+                                <p class="mb-0">Sélectionnez l'élection pour laquelle vous souhaitez vous porter
+                                    candidat.</p>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="election" class="form-label fw-bold required-field">Élection</label>
+                                <select class="form-select form-select-lg" id="election" name="election" required>
+                                    <option value="" selected disabled>Sélectionnez une élection...</option>
+                                    <option value="municipales">Élections Municipales 2023</option>
+                                    <option value="senatorial">Élections Sénatorial 2023</option>
+                                    <option value="regional">Élections Régionales 2023</option>
+                                    <option value="legislatives">Élections Législatives 2023</option>
+                                    <option value="presidentielle">Élection Présidentielle 2027</option>
+                                </select>
+                            </div>
+
+                            <!-- Informations personnelles -->
+                            <div class="alert alert-secondary border-start border-5 border-secondary mb-4">
+                                <h5 class="alert-heading"><i class="bi bi-person-circle me-2"></i>Informations
+                                    personnelles</h5>
+                                <p class="mb-0">Renseignez vos informations personnelles pour compléter votre
+                                    candidature.</p>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label fw-bold required-field">Nom</label>
+                                    <input type="text" class="form-control form-control-lg" id="lastName"
+                                        name="lastName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label fw-bold required-field">Prénom</label>
+                                    <input type="text" class="form-control form-control-lg" id="firstName"
+                                        name="firstName" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="birthDate" class="form-label fw-bold required-field">Date de
+                                        naissance</label>
+                                    <input type="date" class="form-control form-control-lg" id="birthDate"
+                                        name="birthDate" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="city" class="form-label fw-bold required-field">Ville de
+                                        résidence</label>
+                                    <input type="text" class="form-control form-control-lg" id="city" name="city"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label fw-bold required-field">Adresse email</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label fw-bold">Numéro de téléphone</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone" name="phone">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-12 mb-3">
+                                    <label for="profession" class="form-label fw-bold required-field">Profession</label>
+                                    <input type="text" class="form-control form-control-lg" id="profession"
+                                        name="profession" required>
+                                </div>
+                            </div>
+
+                            <!-- Programme électoral -->
+                            <div class="alert alert-warning border-start border-5 border-warning mb-4">
+                                <h5 class="alert-heading"><i class="bi bi-journal-text me-2"></i>Programme électoral
+                                </h5>
+                                <p class="mb-0">Présentez les principaux axes de votre programme électoral.</p>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-12 mb-3">
+                                    <label for="slogan" class="form-label fw-bold required-field">Slogan de
+                                        campagne</label>
+                                    <input type="text" class="form-control form-control-lg" id="slogan" name="slogan"
+                                        required placeholder="Ex: Un avenir meilleur pour tous">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-12 mb-3">
+                                    <label for="priority1" class="form-label fw-bold required-field">Priorité
+                                        n°1</label>
+                                    <textarea class="form-control form-control-lg" id="priority1" name="priority1"
+                                        rows="2" required placeholder="Décrivez votre première priorité..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Conditions d'acceptation -->
+                            <div class="alert alert-success border-start border-5 border-success mb-4">
+                                <h5 class="alert-heading"><i class="bi bi-check-circle me-2"></i>Confirmation</h5>
+                                <p class="mb-0">Vérifiez les informations avant de soumettre votre candidature.</p>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    Je certifie que les informations fournies sont exactes et que je remplis toutes les
+                                    conditions requises pour être candidat à cette élection. J'accepte les <a
+                                        href="#conditions" data-bs-toggle="modal"
+                                        data-bs-target="#conditionsModal">conditions générales</a>.
+                                </label>
+                            </div>
+
+                            <!-- Bouton de soumission -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg py-3 fw-bold">
+                                    <i class="bi bi-send me-2"></i>Soumettre ma candidature
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne latérale avec informations -->
+            <div class="col-lg-4">
+                <div class="card shadow border-0 rounded-3 mb-4 bg-opacity-50 bg-white">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4"><i class="bi bi-info-circle me-2 text-info"></i>Informations
+                            importantes</h4>
+
+                        <div class="alert alert-info mb-3">
+                            <h5 class="alert-heading"><i class="bi bi-calendar-check me-2"></i>Dates des élections</h5>
+                            <ul class="mb-0 ps-3">
+                                <li>Municipales: 15 janvier 2026</li>
+                                <li>Sénatorial: 20 décembre 2025</li>
+                                <li>Régionales: 27 mars 2026</li>
+                                <li>Législatives: 12 et 19 juin 2026</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-warning mb-3">
+                            <h5 class="alert-heading"><i class="bi bi-exclamation-triangle me-2"></i>Conditions requises
+                            </h5>
+                            <p class="mb-2">Pour être candidat, vous devez:</p>
+                            <ul class="mb-0 ps-3">
+                                <li>Être majeur (18 ans ou plus)</li>
+                                <li>Être de nationalité française</li>
+                                <li>Jouir de vos droits civils et politiques</li>
+                                <li>Être inscrit sur les listes électorales</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-success">
+                            <h5 class="alert-heading"><i class="bi bi-clock-history me-2"></i>Procédure</h5>
+                            <ul class="mb-0 ps-3">
+                                <li>Votre candidature sera examinée dans un delai de  72h</li>
+                                <li>Vous recevrez un email de confirmation</li>
+                                <li>Les informations sont modifiables jusqu'à validation</li>
+                                <li>Contact: elections@gouv.fr</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- Modal pour les conditions générales -->
+        <div class="modal fade" id="conditionsModal" tabindex="-1" aria-labelledby="conditionsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="conditionsModalLabel">Conditions générales de candidature</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center" id="successMsg"></p>
+                        <p>En soumettant votre candidature, vous acceptez les conditions suivantes :</p>
+                        <ol>
+                            <li>Vous certifiez que toutes les informations fournies sont exactes et complètes.</li>
+                            <li>Vous confirmez remplir toutes les conditions légales pour être candidat à cette
+                                élection.</li>
+                            <li>Vous vous engagez à respecter les règles de campagne électorale.</li>
+                        </ol>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Service des Élections</h5>
+                    <p class="mb-2">Plateforme de vote et dépote de candidatures</p>
+                    <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>INF TPE 273, FAC Science</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="fw-bold">Contact</h5>
+                    <p class="mb-1"><i class="bi bi-envelope me-2"></i> elections@civixcrew.com</p>
+                    <p class="mb-1"><i class="bi bi-telephone me-2"></i> 01 23 45 67 89</p>
+                    <p class="mb-0"><i class="bi bi-clock me-2"></i> Lundi au vendredi, 9h-17h</p>
+                </div>
+            </div>
+            <div class="text-center mt-3 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2025 Commission Électorale. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS avec Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let inscrits = [];
+
+        // Gérer l'inscription
+        document.getElementById('candidatform').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nom = document.getElementById('lastName').value;
+            const name = document.getElementById('firstName').value;
+
+            // Vérifier si nom ET prénom existent déjà
+            const existe = inscrits.some(inscrit =>
+                inscrit.nom === nom && inscrit.name === name
+            );
+
+            if (existe) {
+                alert('Cette personne est déjà inscrite');
+                return;
+            }
+
+            const nouvelInscrit = {
+                nom: nom,
+                name: name
+            };
+
+            // Ajouter l'inscrit à la liste
+            inscrits.push(nouvelInscrit);
+
+            // Afficher les identifiants dans le modal
+            document.getElementById('successMsg').textContent =
+                `Inscription réussie ! Votre ID est : ${nouvelInscrit.name}, ${nouvelInscrit.nom}`;
+
+            // Afficher le modal
+            const modal = new bootstrap.Modal(document.getElementById('conditionsModal'));
+            modal.show();
+
+            // Réinitialiser le formulaire
+            document.getElementById('candidatform').reset();
+        });
+    </script>
+
+</body>
+
+</html>

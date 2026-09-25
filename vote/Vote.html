@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOTE</title>
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .bg-sidebar {
+      background-color: #f4f4f4;
+    }
+
+    .shadow-sidebar {
+      box-shadow: 3px 0 10px rgba(43, 43, 43, 0.662);
+    }
+
+    .fs-h2 {
+      font-size: 18px;
+    }
+
+    .h-button {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+    }
+
+    .hover-effect:hover {
+      background-color: #c9edf1;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top px-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span style="color: red; font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;">VIRTUAL</span>
+      <img src="/image/photo_2025-11-28_02-52-11 (2).jpg" alt="logo de vote" width="80" height="60"
+        class="d-inline-block align-text-center me-2">
+      <span style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;">ElECTIONS</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto nav-custom">
+        <li class="nav-item">
+          <a class="nav-link" href="/Accueil.html">
+            <i class="bi bi-house-door nav-icon"></i>
+            <span>Accueil</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Inscription.html">
+            <i class="bi bi-pencil-square nav-icon"></i>
+            <span>Inscription</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/Connexion.html">
+            <i class="bi bi-check-square nav-icon"></i>
+            <span>Voter</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Connexion.html">
+            <i class="bi bi-graph-up nav-icon"></i>
+            <span>Résultats</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/Candidature.html">
+            <i class="bi bi-person-circle"></i>
+            <span>Candidat</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Aide.html">
+            <i class="bi bi-question-circle nav-icon"></i>
+            <span>Aide</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<body class="d-flex flex-column min-vh-100 sub-hero">
+  <header class="header bg-white opacity-50 rounded-top text-center text-muted shadow-lg  p-4 mb-0">
+    <h1>BIENVENUE DANS LA PAGE DE VOTE</h1>
+  </header>
+  <main class="flex-grow-1 d-flex overflow-hidden shadow">
+    <aside class="w-25 opacity-50 bg-sidebar p-3 shadow-sidebar">
+      <h2 class="mb-3 fw-bold f-arial fs-h2">Choisissez votre type de D'election</h2>
+
+      <button class=" h-button border-0 border-2 text-dark border-bottom border-dark pointer rounded-2 hover-effect"
+        onclick="onepage('elec_presidential.html')">ELECTION PRESIDENTIELLE</button>
+      <button class=" h-button border-0 border-2 text-dark border-bottom border-dark pointer rounded-2 hover-effect"
+        onclick="onepage('elec_municipal.html')">ELECTION MUNICIPALE</button>
+      <button class=" h-button border-0 border-2 text-dark border-bottom border-dark pointer rounded-2 hover-effect"
+        onclick="onepage('elec_legislatif.html')">ELECTION LEGISLATIVE</button>
+      <button class=" h-button border-0 border-2 text-dark border-bottom border-dark pointer rounded-2 hover-effect"
+        onclick="onepage('elec_regional.html')">ELECTION REGIONALE</button>
+      <button class=" h-button border-0 border-2 text-dark border-bottom border-dark pointer rounded-2 hover-effect"
+        onclick="onepage('elec_senatoriale.html')">ELECTION SENATORIALE</button>
+
+    </aside>
+    <section class="flex-grow-1 d-flex flex-column p-2">
+      <iframe id="myframe" class="w-100 flex-fill border-0" src="default.html"></iframe>
+    </section>
+  </main>
+
+ <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Service des Élections</h5>
+          <p class="mb-2">Plateforme de vote et depote de candidatures</p>
+          <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>INF TPE 273, FAC Science</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5 class="fw-bold">Contact</h5>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i> elections@</p>
+          <p class="mb-1"><i class="bi bi-telephone me-2"></i> 01 23 45 67 89</p>
+          <p class="mb-0"><i class="bi bi-clock me-2"></i> Lundi au vendredi, 9h-17h</p>
+        </div>
+      </div>
+      <div class="text-center mt-3 pt-3 border-top border-secondary">
+        <p class="mb-0">&copy; 2025 Commission Électorale. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function onepage(page) {
+      document.getElementById("myframe").src = page;
+    }
+  </script>
+  <!-- <script src="vote.js"></script> -->
+</body>
+
+</html>

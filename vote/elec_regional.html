@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élections régionales</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <style>        
+       .div-border{
+        border: 1px solid #b3b0b0;
+       }
+       .picture1{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/casile.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture2{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/kirito.jpeg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture3{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/charlaine2.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture4{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/leupi.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture5{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/Rachel.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .picture6{
+            width: 100%;
+            height: 200px;
+            background-image: url('/image/candidat/leslie.jpg'); /* Add image URL here */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 15px;
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-body justify-content-between" style="height: 100vh;">
+    <div class="container">
+
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture1"></div>
+                <h3>Ngatcha Casile Ariel</h3>
+                <p><b>Parti :</b> Jeunes Visionnaires</p>
+                <p class="text-danger"><b>« Une région ambitieuse, un futur prometteur. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Ngatcha Casile Ariel')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture2"></div>
+                <h3>Kazuto Kirigaya</h3>
+                <p><b>Parti :</b> Alliance Citoyenne</p>
+                <p class="text-danger"><b>« Unis pour notre territoire. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Kazuto Kirigaya')">Voter</button>
+            </div>
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture3"></div>
+                <h3>Dassi Charlaine</h3>
+                <p><b>Parti :</b> Génération Équité</p>
+                <p class="text-danger"><b>« Justice, dignité, égalité — notre génération s'engage. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Dassi Charlaine')">Voter</button>
+            </div>
+        </div>
+        <div class="row g-3 align-items-stretch" style="gap:1rem; flex-wrap: nowrap; margin-bottom:2rem;">
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture4"></div>
+                <h3>Leupi Grace</h3>
+                <p><b>Parti :</b> Les Racines et L'Avenir</p>
+                <p class="text-danger"><b>« Une région ambitieuse, un futur prometteur. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Leupi Grace')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture5"></div>
+                <h3>Mbebi Rachel</h3>
+                <p><b>Parti :</b> L'étoile du Progrès pour le futur</p>
+                <p class="text-danger"><b>« Le progrès comme boussole, l'avenir comme horizon. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Mbebi Rachel')">Voter</button>
+            </div>
+
+            <div class="col-4 border-1 border rounded-4 shadow-lg text-center div-border p-3 d-flex flex-column" style="overflow-y:auto;">
+                <div class="picture6"></div>
+                <h3>Tiomene Lesline</h3>
+                <p><b>Parti :</b> Le Parti des Territoires</p>
+                <p class="text-danger"><b>« Proche de vous, engagé pour tous. »</b></p>
+                <button class="btn pt-3 pb-3 px-4 btn-success text-white border-0 pointer rounded-3 mt-auto align-self-center vote-button" onclick="handlevote('Tiomene Lesline')">Voter</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="vote2.js"></script>
+</body>
+</html>
